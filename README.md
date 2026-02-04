@@ -26,8 +26,6 @@ npm run dev
 
 ## Deployment
 
-Live Demo: [dummy-vercel-url](dummy-vercel-url)
-
 Deployed on Vercel. To run dev server locally:
 
 ```bash
