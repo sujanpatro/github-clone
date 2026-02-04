@@ -1,0 +1,99 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
+    "assist": { "actions": { "source": { "organizeImports": "on" } } },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space"
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "a11y": {},
+            "complexity": {
+                "noForEach": "off",
+                "useOptionalChain": "warn"
+            },
+            "suspicious": {
+                "noExplicitAny": "error",
+                "noConfusingVoidType": "error",
+                "noEmptyInterface": "error",
+                "noMisleadingInstantiator": "error",
+                "useNamespaceKeyword": "error",
+                "noArrayIndexKey": "off",
+                "noWith": "error",
+                "noConsole": {
+                    "level": "warn",
+                    "options": { "allow": ["log"] }
+                }
+            },
+            "correctness": {
+                "noUnusedVariables": "error",
+                "useExhaustiveDependencies": "error",
+                "noUnusedImports": "error"
+            },
+            "style": {
+                "noNegationElse": "off",
+                "useImportType": "error"
+            },
+            "performance": {
+                "noDelete": "warn"
+            },
+            "security": {
+                "noDangerouslySetInnerHtml": "error"
+            }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "enabled": true,
+            "quoteStyle": "double",
+            "jsxQuoteStyle": "double",
+            "semicolons": "always",
+            "arrowParentheses": "always",
+            "indentWidth": 2,
+            "lineWidth": 100
+        },
+        "jsxRuntime": "transparent"
+    },
+    "json": {
+        "formatter": {
+            "enabled": true,
+            "indentWidth": 4
+        }
+    },
+    "overrides": [
+        {
+            "includes": ["**/*.js", "**/*.jsx"],
+            "linter": {
+                "rules": {
+                    "style": {
+                        "noDefaultExport": "off"
+                    }
+                }
+            }
+        },
+        {
+            "includes": ["**/*.ts", "**/*.tsx"],
+            "linter": {
+                "rules": {
+                    "style": {
+                        "noDefaultExport": "off"
+                    }
+                }
+            }
+        }
+    ],
+    "files": {
+        "includes": [
+            "**",
+            "!**/package-lock.json",
+            "!**/packages/react-app/mockServiceWorker.js"
+        ]
+    },
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    }
+}
